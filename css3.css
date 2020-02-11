@@ -1,0 +1,92 @@
+/* seleciona todos os paragrafos que estão apos um h2 dentro da mesma tag 
+   e que sejam irmãos */
+h2 ~ p {
+    background-color: blueviolet;
+}
+
+/* seleciona somete o paragrafo imediatamente apos o h2 da mesma tag */
+h2 + p {
+    background-color: blueviolet;
+}
+
+/* pega o h1 principal filho direto do article (não pega os outros h1 que estejam
+dentro de outras tags dentro do article)  */
+article > h1 {
+    background-color: blueviolet;
+}
+
+/* aplica em todos os paragrafos menos no que posui a classe especial */
+p:not(.especial){
+    background-color: blueviolet;
+}
+
+/* pega o primeiro elemento filho de uma tag obs(o li ja é esse filho)  */
+li:first-child{
+    background-color: blueviolet;
+}
+
+/* pega o utimo elemento filho de uma tag obs(o li ja é esse filho)*/
+li:last-child{
+    background-color: blueviolet;
+}
+
+/* permite pegar o elemento especificado */
+li:nth-child(3){
+    background-color: blueviolet;
+}
+
+/* pode passar espressões dentro do nth */
+/* pega os elementos pares */
+li:nth-child(2n){
+    background-color: blueviolet;
+}
+
+/* pega os elementos impares */
+li:nth-child(2n+1){
+    background-color: blueviolet;
+}
+
+/* pega todos os links que tem href */
+a:link{
+    background-color: blueviolet;
+}
+
+/* seleciona todos os links que cujo o href ja foi visitado */
+a:visited{
+    background-color: blueviolet;
+}
+
+/* seleciona o link no exato momento que clica nele */
+a:active{
+    background-color: blueviolet;
+}
+
+/* pseudos elementos */
+
+/* seleciona a primeira letra de uma frase dentro de um paragrafo */
+p::first-letter{
+    font-size: 200%;
+}
+
+/* seleciona a primeira linha de um texto grande dentro de um paragrafo */
+p::first-line{
+    font-size: 100%;
+}
+
+/* after e before (pseudos elementos) */
+/* adciona um cochete antes do conteudo de um link */
+a::before{
+    content:'[';
+}
+
+/* adciona um ']' logo apos o conteudo de um link */
+a::after{
+    content: ']';
+}
+
+/* adciona o texto '(externo)' a todos os liks que começa http:// no href */
+a[href^="http://"]::after{
+    content: '(externo)';
+}
+
+/*  */
