@@ -89,4 +89,10 @@ a[href^="http://"]::after{
     content: '(externo)';
 }
 
-/*  */
+/* retira a borda azul qundo clica nele*/
+input:focus,
+button:focus{
+  outline: thin dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
