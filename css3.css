@@ -112,3 +112,12 @@ div::-webkit-scrollbar-thumb {
   background:#8b8778; 
 }
 /*-----*/
+
+/*ocutar o texto quando acabar a div e colocar ...*/
+p{
+   display: inline-block;
+   white-space: nowrap;
+   width:250px;
+   overflow: hidden !important;
+   text-overflow: ellipsis;
+}
