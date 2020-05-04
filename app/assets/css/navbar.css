@@ -1,0 +1,125 @@
+section {
+    background: url(../img/bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all 0.5s;
+}
+
+nav {
+    /* background-color: rgba(255, 72, 136, 0.4); */
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .left {
+    display: flex;
+    background-color: white;
+}       
+
+nav .right {
+    display: flex;
+    /* background-color: white; */
+    margin-left: auto;
+}
+
+.right > ul {
+    display: flex;
+}
+
+.right > ul > li {
+    /* background-color: tomato; */
+    margin: 0 5px;
+    position: relative;
+}
+
+.right > ul li .item{
+    /* background-color: teal; */
+    line-height: 70px;
+    height: 70px;
+    font-size: 20px;
+    padding: 22px 10px;
+    margin: 0 2px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.right > ul li:hover .item{
+    /* background-color: rgb(255, 38, 114); */
+    color: rgba(255, 0, 91, 0.8);
+}
+
+.right > ul li .sub-menu {
+    position: absolute;
+    width: 200px;
+    padding-top: 10px;
+    right: 0;
+    border-radius: 10px;
+    display: none;
+    transition: all 0.3s linear;
+}
+
+.right > ul li .sub-menu li a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgba(255, 0, 91, 0.8);    
+    transition: all 0.3s;
+}
+
+.right > ul li .sub-menu li:hover a{
+    background-color: rgba(187, 56, 102, 1);
+}
+
+.right > ul li .sub-menu li:first-child a{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.right > ul li .sub-menu li:last-child a{
+    border-radius: 0px 0px 10px 10px;
+}
+
+.right > ul li:hover .sub-menu{
+    display: block;
+    animation: fade-in 0.5s;
+}
+
+.right > ul li:not(:hover) .sub-menu.did-fade-in{
+    display: block;
+    animation: fade-out 0.5s;
+} 
+
+.sub-menu::before{
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: -2.3px;
+    margin-left: -0.75em;
+    border-bottom: solid 0.75em rgba(255, 0, 91, 0.8); 
+    border-left: solid 0.75em rgba(64, 64, 64, 0);
+    border-right: solid 0.75em rgba(64, 64, 64, 0);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+} 

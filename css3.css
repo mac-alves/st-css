@@ -121,3 +121,8 @@ p{
    overflow: hidden !important;
    text-overflow: ellipsis;
 }
+
+/* impede que o texto possa ser selcioando pelo mouse */
+header {
+    user-select: none;
+}

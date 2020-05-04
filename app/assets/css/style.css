@@ -1,0 +1,13 @@
+/* 
+    1366 X 778
+    360 x 640 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
