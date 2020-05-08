@@ -126,3 +126,8 @@ p{
 header {
     user-select: none;
 }
+
+/* muda o tamanho (scala) do elemento e rotacina (rotate)*/
+svg:hover {
+   transform: scale(1.5) rotate(-15deg); 
+}
