@@ -131,3 +131,17 @@ header {
 svg:hover {
    transform: scale(1.5) rotate(-15deg); 
 }
+
+/* estiliza o scroll do componete */
+.search ::-webkit-input-placeholder{
+    color: #aaa;
+}
+.search :-moz-placeholder { /* Firefox 18- */
+    color: #aaa;
+}
+.search ::-moz-placeholder {  /* Firefox 19+ */
+    color: #aaa;
+}
+.search :-ms-input-placeholder{
+    color: #aaa;
+}
