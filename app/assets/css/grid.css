@@ -1,0 +1,151 @@
+/* 
+    PROPRIEDADES
+
+    CONTAINER
+        display: grid;
+        grid-tamplate-columns
+        grid-tamplate-row
+        grid-gap
+            grid-row-gap
+            grid-column-gap
+        grid-template-areas
+
+    ITENS
+        grid-column
+            grid-column-start
+            grid-column-end
+        grid-row
+            grid-row-start
+            grid-row-end
+        grid-area
+
+    ALINHAMENTOS
+        permite alinhar o proprio grid no spaço fora do grid
+            justify-content
+            align-content
+
+                valores possiveis
+                    start
+                    end
+                    center
+                    stretch : default
+                    space-between
+                    space-around
+                    space-evenly : mesmo tanto de espaço em todos (IMPORTANTE)
+        
+        permite alinhar os itens dentro da celula 
+            justify-items: ;
+            align-items: ;
+                
+                valores possiveis
+                    start
+                    end
+                    center
+                    stretch
+        
+        mesma coisa que o -items, consuto é usado dentro da celula, NÂO fora
+            justify-self: ;
+            align-self: ;
+
+                valores possiveis
+                    start
+                    end
+                    center
+                    stretch  
+*/
+
+header{
+    background-color: #344;
+    grid-area: header;
+    /* grid-column: 1/3; */
+        /* grid-column-start: 1;
+        grid-column-end: 3; */
+}
+
+main{
+    background-color: #164;
+    grid-area: main;
+    /* grid-column: 1/2; */
+}
+
+aside{
+    background-color: #867;
+    grid-area: aside;
+    /* grid-column: 2/3; */
+}
+
+footer{
+    background-color: #545;
+    grid-area: footer;
+    /* grid-column: 1/3; */
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 1fr -> 1flex */
+    grid-template-rows: 20vh 70vh 10vh;
+    gap: 2px;
+        /* row-gap: 2px; */
+        /* column-gap: 2px; */
+
+    grid-template-areas: 
+        "header header"
+        "main   aside"
+        "footer footer"
+    ;
+}
+
+/* ---------------------- */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.container2{
+    background: black;;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.container2 > div {
+    background: #7159c1;
+}
+
+
+/* --------------------- */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.container3{
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, 1fr);
+}
+
+.box{
+    height: 100vh;
+    background-color: blue;
+    position: relative;
+}
+
+.box:last-child{
+    background-color: white;
+}
+
+h1 {
+    text-transform: uppercase;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

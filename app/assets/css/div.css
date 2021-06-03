@@ -1,0 +1,39 @@
+#cantoCortado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.outer {
+    font-size: x-small;
+}
+
+.corners {
+    width: 200px;
+    height: 40px;
+}
+
+.top {
+    border-bottom: 40px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+}
+
+.bottom{
+    border-top: 40px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+}
+
+.bottom p {
+    position: relative;
+    top: -40px;
+}
+
+.main {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    padding: 0 8px;
+}
