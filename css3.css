@@ -126,3 +126,35 @@ p{
 header {
     user-select: none;
 }
+
+/* muda o tamanho (scala) do elemento e rotacina (rotate)*/
+svg:hover {
+   transform: scale(1.5) rotate(-15deg); 
+}
+
+/* estiliza o placeholder do input */
+.search ::-webkit-input-placeholder{
+    color: #aaa;
+}
+.search :-moz-placeholder { /* Firefox 18- */
+    color: #aaa;
+}
+.search ::-moz-placeholder {  /* Firefox 19+ */
+    color: #aaa;
+}
+.search :-ms-input-placeholder{
+    color: #aaa;
+}
+
+/* estiliza o scroll do componente */
+ main::-webkit-scrollbar {
+     width:10px;
+     background:#6E6D6F;
+ }
+ main::-webkit-scrollbar-track {
+     background: rgba(0,0,0,0.1);
+ }
+ main::-webkit-scrollbar-thumb {
+     border-radius:10px;
+     background:#4A494B;
+ }
