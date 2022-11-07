@@ -4,7 +4,7 @@ h2 ~ p {
     background-color: blueviolet;
 }
 
-/* seleciona somete o paragrafo imediatamente apos o h2 da mesma tag */
+/* seleciona somete o paragrafo imediatamente apos o h2 da mesma tag  */
 h2 + p {
     background-color: blueviolet;
 }
